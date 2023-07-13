@@ -479,7 +479,7 @@ body ul {
     justify-content: center;
   }
   .portfolio-body {
-    font-size: 25px;
+    font-size: 14px;
   }
 }
 @media (max-width: 768px) {
