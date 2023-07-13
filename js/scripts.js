@@ -12,11 +12,13 @@ $(window).scroll(function () {
   // Изменение фона шапки при прокрутке
   if (scroll > 0) {
     $('.header').addClass('scrolled');
+    $('.header').css('box-shadow','0 0 10px #00000030');
     if ($(window).width() <= 1200) {
       $('.header-menu').css('background', '#fdfdfd');
     }
   } else {
     $('.header').removeClass('scrolled');
+    $('.header').css('box-shadow','0 0 0 #00000030');
     if ($(window).width() <= 1200) {
       $('.header-menu').css('background', '#1E5AAF');
     }
