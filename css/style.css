@@ -240,9 +240,12 @@ body ul {
 .card h1 {
   color: #fff;
   margin-bottom: 20px;
+  font-size: 24px;
 }
 .card p {
   color: rgba(253, 253, 253, 0.5019607843);
+  line-height: 140%;
+  font-size: 14px;
 }
 .card svg {
   transition: 0.3s;
@@ -260,6 +263,8 @@ body ul {
   padding: 45px;
   border-radius: 0 5px 5px 0;
   width: 30%;
+  font-size: 24px;
+  line-height: 140%;
 }
 .img-descryption p {
   margin-bottom: 20px;
@@ -283,7 +288,6 @@ body ul {
 }
 .slider-line-item {
   display: flex;
-  flex: 100%;
   border-radius: 5px;
 }
 .slider-line-item img {
@@ -306,7 +310,6 @@ body ul {
 .navigation {
   display: flex;
   gap: 50px;
-  margin-bottom: 50px;
 }
 
 .slogan {
@@ -316,6 +319,10 @@ body ul {
   line-height: 130%;
   color: #252627;
   max-width: 989px;
+}
+
+.top-items {
+  margin-bottom: 50px;
 }
 
 .portfolio {
@@ -328,7 +335,7 @@ body ul {
   margin-bottom: 75px;
 }
 .portfolio-head-text {
-  flex: 70%;
+  max-width: 600px;
 }
 .portfolio-head-text h1 {
   color: #fff;
@@ -341,7 +348,8 @@ body ul {
   color: #557EB8;
 }
 .portfolio-head-avatar {
-  flex: 30%;
+  width: 350px;
+  margin-block: 20px;
 }
 .portfolio-head-avatar img {
   width: 150px;
@@ -351,6 +359,21 @@ body ul {
   font-size: 30px;
   margin-bottom: 40px;
 }
+
+.footer {
+  padding: 50px 50px 20px 50px;
+  background: #051A2C;
+  color: #fdfdfd;
+}
+.footer p {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+.footer-belongs {
+  font-size: 16px;
+  color: #8C8D98;
+}
+
 @media (max-width: 1200px) {
   .lock {
     overflow: hidden;
@@ -439,6 +462,20 @@ body ul {
   }
   .card {
     flex: 33.3%;
+  }
+  .slider-line-item img {
+    border-radius: 5px 5px 0px 0px;
+  }
+  .portfolio {
+    padding: 25px;
+  }
+  .portfolio-head {
+    flex-wrap: wrap-reverse;
+    margin-bottom: 25px;
+    justify-content: center;
+  }
+  .portfolio-body {
+    font-size: 25px;
   }
 }
 @media (max-width: 768px) {

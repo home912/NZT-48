@@ -12,10 +12,8 @@ $(window).scroll(function () {
   // Изменение фона шапки при прокрутке
   if (scroll > 0) {
     $('.header').addClass('scrolled');
-    $('.header').css('box-shadow', '0 0 10px #0000003d');
   } else {
     $('.header').removeClass('scrolled');
-    $('.header').css('box-shadow', '0 0 0 #0000003d');
   }
 
   // Изменение цвета текста и SVG при прокрутке
@@ -61,19 +59,22 @@ function initSlider(slider, index) {
   function init() {
     width = slider.offsetWidth;
     if (index === 1) {
-      sliderLine.style.width = (width - 500) * sliderImages.length + 'px'; // Уменьшаем ширину на 800px
+      const slideWidth = width * 0.8; // Уменьшаем ширину каждого слайда на 20%
+      const gap = 20; // Устанавливаем отступ между слайдами второго слайдера
+      const totalWidth = (slideWidth + gap) * sliderImages.length - gap; // Вычисляем общую ширину слайдера с учетом отступов
+      sliderLine.style.width = totalWidth + 'px';
       sliderImages.forEach(item => {
-        item.style.width = width - 500 + 'px'; // Уменьшаем ширину слайда на 800px
+        item.style.width = slideWidth + 'px';
         item.style.height = 'auto';
+        item.style.marginRight = gap + 'px';
       });
-      sliderLine.style.gap = '40px'; // Добавляем отступы (gap) в 40px для второго слайдера
     } else {
-      sliderLine.style.width = width * sliderImages.length + 'px'; // Используем обычную ширину для других слайдеров
+      sliderLine.style.width = width * sliderImages.length + 'px';
       sliderImages.forEach(item => {
-        item.style.width = width + 'px'; // Используем обычную ширину слайда для других слайдеров
+        item.style.width = width + 'px';
         item.style.height = 'auto';
+        item.style.marginRight = '0';
       });
-      sliderLine.style.gap = '0'; // Убираем отступы для других слайдеров
     }
     rollSlider();
   }
@@ -101,9 +102,12 @@ function initSlider(slider, index) {
 
   function rollSlider() {
     if (index === 1) {
-      sliderLine.style.transform = `translateX(-${count * (width - 500)}px)`; // Уменьшаем смещение на 800px для второго слайдера
+      const slideWidth = width * 0.8;
+      const gap = 20;
+      const slideOffset = (slideWidth + gap) * count; // Смещение для каждого слайда второго слайдера
+      sliderLine.style.transform = `translateX(-${slideOffset}px)`;
     } else {
-      sliderLine.style.transform = `translateX(-${count * width}px)`; // Используем обычное смещение для других слайдеров
+      sliderLine.style.transform = `translateX(-${count * width}px)`;
     }
   }
 }
@@ -113,5 +117,6 @@ const sliders = document.querySelectorAll('.slider');
 sliders.forEach((slider, index) => {
   initSlider(slider, index);
 });
+
 
 
