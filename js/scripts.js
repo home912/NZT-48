@@ -12,11 +12,16 @@ $(window).scroll(function () {
   // Изменение фона шапки при прокрутке
   if (scroll > 0) {
     $('.header').addClass('scrolled');
-    $('.header-menu').css('background', '#fdfdfd');
+    if ($(window).width() <= 1200) {
+      $('.header-menu').css('background', '#fdfdfd');
+    }
   } else {
     $('.header').removeClass('scrolled');
-    $('.header-menu').css('background', '#1E5AAF');
+    if ($(window).width() <= 1200) {
+      $('.header-menu').css('background', '#1E5AAF');
+    }
   }
+
 
   // Изменение цвета текста и SVG при прокрутке
   if (scroll > 0) {
@@ -119,6 +124,5 @@ const sliders = document.querySelectorAll('.slider');
 sliders.forEach((slider, index) => {
   initSlider(slider, index);
 });
-
 
 
