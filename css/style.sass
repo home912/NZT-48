@@ -1,0 +1,380 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+$color1: #1E5AAF
+$color2: #FDFDFD
+$color3: #DF0050
+$back: linear-gradient(0deg, rgba(65,124,209,0.3) 0%, rgba(9,46,98,0.3) 100%)
+
+body, html
+    font-family: 'Graphik LC Web'
+    overflow-x: hidden
+    background: $color2
+    font-size: 18px
+body
+    a
+        text-decoration: none
+        color: $color2
+    ul
+        list-style: none
+
+.header
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 50
+    transition: 0.3s
+    &.scrolled
+        background-color: #fff
+    &:before
+        content: ''
+        position: absolute
+        z-index: 2
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    &-body
+        position: relative
+        height: 100px
+        margin: auto 25px auto 25px
+        padding-left: 25px
+        padding-right: 25px
+    &-logo
+        position: relative
+        z-index: 3
+        gap: 10px
+        width: auto
+        overflow: hidden
+        font-size: 24px
+        font-weight: 800
+    &-burger
+        display: none
+
+    &-list
+        position: relative
+        z-index: 2
+        gap: 20px
+
+    &-link
+        position: relative
+        font-size: 18px
+        font-weight: 400
+        transition: 0.2s
+        &:hover
+            color: #0F3974
+
+.scrolled
+    color: $color1 !important
+    &-button
+        color: #fff !important
+        background: $color1 !important
+
+.stick
+    background: $color1 !important
+    &-before-after
+        &::before,
+        &::after
+            background-color: #1E5AAF !important
+
+.transparent
+    background: transparent !important
+
+.buttons
+    position: relative
+    z-index: 2
+    gap: 15px
+    transition: 0.3s
+
+#original
+    font-family: 'Graphik LC Web'
+    cursor: pointer
+    background: transparent
+    border-radius: 25px
+    border: 2px solid $color3
+    border-radius: 25px
+    color: #fff
+    font-size: 18px
+    padding: 10px
+
+#buy
+    font-family: 'Graphik LC Web'
+    background: #fff
+    border-radius: 25px
+    color: #49301D
+    font-size: 18px
+    padding: 10px
+    border: none
+    cursor: pointer
+
+.flex
+    display: flex
+    &-jc
+        justify-content: center
+    &-jb
+        justify-content: space-between
+    &-je
+        justify-content: space-evenly
+    &-end
+        justify-content: end
+    &-d-col
+        flex-direction: column
+    &-ac
+        align-items: center
+    &-wr
+        flex-wrap: wrap
+
+.preview
+    position: relative
+    .background
+        object-fit: cover
+        width: 100%
+        height: 548px
+
+.link
+
+.tagline
+    color: #fff
+    position: absolute
+    bottom: 84px
+    left: 50px
+    max-width: 652px
+    h1
+        font-size: 80px
+        margin-bottom: 40px
+
+.link
+
+.link:hover .arrow
+    transform: translate(5px, 0)
+
+.arrow
+    transition: 0.2s
+    display: inline-block
+    margin-left: 15px
+
+.link
+    &-block
+        display: grid
+        grid-template-rows: 1fr 1fr
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 45px
+        padding: 0 25px 0 25px
+        margin: 50px 25px
+    &-item
+        border-top: solid 1px #DADCE7
+        display: flex
+        padding-block: 25px
+        flex: 33.3%
+        align-items: center
+        justify-content: space-between
+        &:hover .link-arrow
+            transform: translate(10px, 0)
+    &-arrow
+        transition: 0.3s
+        margin-right: 10px
+
+.text
+    margin: 120px 25px
+    padding: 0 25px 0 25px
+    max-width: 640px
+    h1
+        color: $color1
+        font-size: 40px
+        margin-bottom: 40px
+    p
+        color: #797A84
+        font-size: 20px
+        font-weight: 400
+        line-height: 140%
+        margin-block: 30px
+
+.cards
+    display: flex
+    gap: 46px
+    margin: 120px 25px
+    padding: 0 25px 0 25px
+
+.card
+    position: relative
+    flex: 25%
+    height: 413px
+    padding: 35px
+    border-radius: 4px
+    background: linear-gradient(#092E62, #417CD1)
+    h1
+        color: #fff
+        margin-bottom: 20px
+    p
+        color: #fdfdfd80
+    svg
+        transition: 0.3s
+        position: absolute
+        bottom: 40px
+        right: 35px
+    &:hover svg
+        transform: translate(10px, 0)
+
+.img-descryption
+    background: $color1
+    color: $color2
+    padding: 45px
+    border-radius: 0 5px 5px 0
+    width: 30%
+    p
+        margin-bottom: 20px
+
+.date
+    color: #8EA9D0
+    font-size: 16px
+    margin-bottom: 40px
+
+.slider
+    margin: 120px 50px
+    overflow: hidden
+    &-line
+        display: flex
+        transition: 1s
+        width: 100%
+    &-line-item
+        display: flex
+        flex: 100%
+        border-radius: 5px
+        img
+            max-width: 100%
+            height: auto
+    &-prev
+        cursor: pointer
+    &-next
+        cursor: pointer
+    &-image
+        width: 70%
+        object-fit: cover
+
+.navigation
+    display: flex
+    gap: 50px
+    margin-bottom: 50px
+
+@media (max-width: 1200px)
+
+    .lock
+        overflow: hidden
+
+    .header
+        &-burger
+            position: relative
+            z-index: 3
+            display: block
+            position: relative
+            width: 30px
+            height: 20px
+            &.active
+                &:before
+                    transform: rotate(-45deg)
+                    top: 9px
+
+                & span
+                    transition: 0.1s
+                    background-color: transparent
+
+                &:after
+                    transform: rotate(45deg)
+                    bottom: 9px
+
+            &:before
+                content: ''
+                position: absolute
+                background: $color2
+                width: 100%
+                height: 2px
+                top: 0
+                left: 0
+                transition: .3s
+
+            & span
+                position: absolute
+                background: $color2
+                width: 100%
+                height: 2px
+                top: 9px
+                left: 0
+                transition: .3s
+
+            &:after
+                content: ''
+                position: absolute
+                background: $color2
+                width: 100%
+                height: 2px
+                left: 0
+                bottom: 1px
+                transition: .3s
+        &-menu
+            position: fixed
+            top: -100%
+            left: 0
+            width: 100%
+            height: 100%
+            background: $color1
+            padding: 100px 10px 0px 50px
+            transition: .3s
+            &.active
+                top: 0
+
+        &-list
+            flex-direction: column
+            & li
+                margin: 0 0 20px 0
+
+        .buttons
+            position: fixed
+            top: -100%
+            left: 0
+            &.active
+                flex-direction: column
+                z-index: 3
+                top: 80vh
+                left: 50px
+
+    .cards
+        flex-wrap: wrap
+
+    .card
+        flex: 33.3%
+
+@media (max-width: 768px)
+
+    .tagline
+        max-width: 300px
+        h1
+            font-size: 2.3em
+
+    .link
+        &-block
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(6, 1fr)
+            margin: 50px auto
+
+    .text
+        margin: 120px auto
+
+    .cards
+        margin: 120px auto
+
+    .slider
+        margin: 120px 25px
+
+    .slider-line-item
+        flex-direction: column
+    .slider-image
+        width: auto
+        height: 40%
+
+    .img-descryption
+        width: 100%
+        height: 60%
+        border-radius: 0 0 5px 5px
