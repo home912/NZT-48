@@ -12,10 +12,10 @@ $(window).scroll(function () {
   // Изменение фона шапки при прокрутке
   if (scroll > 0) {
     $('.header').addClass('scrolled');
-    $('.header-menu').css('background', '#fdfdfd');
+    $('.header').css('box-shadow', '0 0 10px #0000003d');
   } else {
     $('.header').removeClass('scrolled');
-    $('.header-menu').css('background', '#1E5AAF');
+    $('.header').css('box-shadow', '0 0 0 #0000003d');
   }
 
   // Изменение цвета текста и SVG при прокрутке

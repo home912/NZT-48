@@ -319,7 +319,7 @@ body ul {
 }
 
 .portfolio {
-  background: linear-gradient(#092E62, #417CD1);
+  background: #1E5AAF;
   width: 100%;
   padding: 60px 110px;
   border-radius: 5px;
@@ -342,6 +342,9 @@ body ul {
 }
 .portfolio-head-avatar {
   flex: 30%;
+}
+.portfolio-head-avatar img {
+  width: 150px;
 }
 .portfolio-body {
   color: #9FB7DB;
