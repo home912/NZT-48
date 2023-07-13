@@ -279,6 +279,7 @@ body ul {
   display: flex;
   transition: 1s;
   width: 100%;
+  height: 70vh;
 }
 .slider-line-item {
   display: flex;
@@ -288,6 +289,7 @@ body ul {
 .slider-line-item img {
   max-width: 100%;
   height: auto;
+  border-radius: 5px 0 0 5px;
 }
 .slider-prev {
   cursor: pointer;
@@ -307,6 +309,45 @@ body ul {
   margin-bottom: 50px;
 }
 
+.slogan {
+  margin: 40px 25px;
+  padding: 0 25px;
+  font-size: 40px;
+  line-height: 130%;
+  color: #252627;
+  max-width: 989px;
+}
+
+.portfolio {
+  background: linear-gradient(#092E62, #417CD1);
+  width: 100%;
+  padding: 60px 110px;
+  border-radius: 5px;
+}
+.portfolio-head {
+  margin-bottom: 75px;
+}
+.portfolio-head-text {
+  flex: 70%;
+}
+.portfolio-head-text h1 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.72px;
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+.portfolio-head-text p {
+  color: #557EB8;
+}
+.portfolio-head-avatar {
+  flex: 30%;
+}
+.portfolio-body {
+  color: #9FB7DB;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
 @media (max-width: 1200px) {
   .lock {
     overflow: hidden;
