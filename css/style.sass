@@ -153,6 +153,8 @@ body
     margin-left: 15px
 
 .link
+    position: relative
+    z-index: 1
     font-size: 18px
     &-block
         display: grid
@@ -237,6 +239,7 @@ body
         transform: translate(10px, 0)
 
 .img-descryption
+    position: relative
     background: $color1
     color: $color2
     padding: 45px
@@ -245,9 +248,25 @@ body
     font-size: 24px
     line-height: 140%
     p
+        position: relative
+        z-index: 1
         margin-bottom: 20px
+    &::before
+        position: absolute
+        content: ""
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background-image: linear-gradient(to bottom,#092E62,#417CD1)
+        transition: opacity 0.5s linear
+        opacity: 0
+    &:hover::before
+        opacity: 1
 
 .date
+    position: relative
+    z-index: 1
     color: #8EA9D0
     font-size: 16px
     margin-bottom: 40px
@@ -292,11 +311,14 @@ body
     margin-bottom: 50px
 
 .portfolio
+    position: relative
     background: $color1
     width: 100%
     padding: 60px 110px
     border-radius: 5px
     &-head
+        position: relative
+        z-index: 1
         margin-bottom: 75px
         &-text
             max-width: 600px
@@ -316,9 +338,23 @@ body
             img
                 width: 150px
     &-body
+        position: relative
+        z-index: 1
         color: #9FB7DB
         font-size: 30px
         margin-bottom: 40px
+    &::before
+        position: absolute
+        content: ""
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background-image: linear-gradient(to bottom,#092E62,#417CD1)
+        transition: opacity 0.5s linear
+        opacity: 0
+    &:hover::before
+        opacity: 1
 
 .footer
     padding: 50px 50px 20px 50px

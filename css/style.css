@@ -180,6 +180,8 @@ body ul {
 }
 
 .link {
+  position: relative;
+  z-index: 1;
   font-size: 18px;
 }
 .link-block {
@@ -281,6 +283,7 @@ body ul {
 }
 
 .img-descryption {
+  position: relative;
   background: #1E5AAF;
   color: #FDFDFD;
   padding: 45px;
@@ -290,10 +293,28 @@ body ul {
   line-height: 140%;
 }
 .img-descryption p {
+  position: relative;
+  z-index: 1;
   margin-bottom: 20px;
+}
+.img-descryption::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, #092E62, #417CD1);
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+.img-descryption:hover::before {
+  opacity: 1;
 }
 
 .date {
+  position: relative;
+  z-index: 1;
   color: #8EA9D0;
   font-size: 16px;
   margin-bottom: 40px;
@@ -349,12 +370,15 @@ body ul {
 }
 
 .portfolio {
+  position: relative;
   background: #1E5AAF;
   width: 100%;
   padding: 60px 110px;
   border-radius: 5px;
 }
 .portfolio-head {
+  position: relative;
+  z-index: 1;
   margin-bottom: 75px;
 }
 .portfolio-head-text {
@@ -380,9 +404,25 @@ body ul {
   width: 150px;
 }
 .portfolio-body {
+  position: relative;
+  z-index: 1;
   color: #9FB7DB;
   font-size: 30px;
   margin-bottom: 40px;
+}
+.portfolio::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, #092E62, #417CD1);
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+.portfolio:hover::before {
+  opacity: 1;
 }
 
 .footer {
