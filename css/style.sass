@@ -144,7 +144,6 @@ body
         font-size: 80px
         margin-bottom: 40px
 
-
 .link:hover .arrow
     transform: translate(5px, 0)
 
@@ -202,16 +201,34 @@ body
     height: 413px
     padding: 35px
     border-radius: 4px
-    background: linear-gradient(#092E62, #417CD1)
+    background-image: linear-gradient(to bottom,#1E5AAF,#1E5AAF)
+    &::before
+        position: absolute
+        content: ""
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background-image: linear-gradient(to bottom,#092E62,#417CD1)
+        transition: opacity 0.5s linear
+        opacity: 0
+    &:hover::before
+        opacity: 1
     h1
+        position: relative
+        z-index: 1
         color: #fff
         margin-bottom: 20px
         font-size: 24px
     p
+        position: relative
+        z-index: 1
         color: #fdfdfd80
         line-height: 140%
         font-size: 14px
     svg
+        position: relative
+        z-index: 1
         transition: 0.3s
         position: absolute
         bottom: 40px
@@ -292,6 +309,8 @@ body
             p
                 color: #557EB8
         &-avatar
+            display: flex
+            justify-content: center
             width: 350px
             margin-block: 20px
             img
@@ -408,11 +427,8 @@ body
         &-head
             flex-wrap: wrap-reverse
             margin-bottom: 25px
-            justify-content: center
         &-body
             font-size: 14px
-
-    
 
 @media (max-width: 768px)
 
