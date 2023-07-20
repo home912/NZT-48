@@ -6,6 +6,7 @@
 $color1: #1E5AAF
 $color2: #FDFDFD
 $color3: #DF0050
+$color4: #0F3974
 $back: linear-gradient(0deg, rgba(65,124,209,0.3) 0%, rgba(9,46,98,0.3) 100%)
 
 body, html
@@ -65,7 +66,7 @@ body
         font-weight: 400
         transition: 0.2s
         &:hover
-            color: #0F3974
+            color: $color4
 
 .scrolled
     color: $color1 !important
@@ -170,11 +171,18 @@ body
         flex: 33.3%
         align-items: center
         justify-content: space-between
-        &:hover .link-arrow
-            transform: translate(10px, 0)
+        &:hover 
+            & .link-arrow
+                transform: translate(10px, 0)
+            & .link-text
+                color: $color4
+
     &-arrow
         transition: 0.3s
         margin-right: 10px
+    &-text
+        transition: .3s
+
 
 .text
     margin: 120px 25px

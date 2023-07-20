@@ -1,7 +1,7 @@
+/* функция открытия меню-бургер */
 $(document).ready(function () {
-  // Функция для открытия/закрытия меню-бургера
   $('.header-burger').click(function (event) {
-    $('.header-burger, .header-menu, .buttons').toggleClass('active');
+    $('.header-burger, .header-menu').toggleClass('active');
     $('body').toggleClass('lock');
   });
 });

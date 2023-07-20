@@ -204,9 +204,15 @@ body ul {
 .link-item:hover .link-arrow {
   transform: translate(10px, 0);
 }
+.link-item:hover .link-text {
+  color: #0F3974;
+}
 .link-arrow {
   transition: 0.3s;
   margin-right: 10px;
+}
+.link-text {
+  transition: 0.3s;
 }
 
 .text {
